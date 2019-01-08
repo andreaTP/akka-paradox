@@ -1,9 +1,10 @@
-scalaVersion := "2.12.4"
+scalaVersion := "2.12.7"
+crossScalaVersions := Seq("2.10.7", "2.12.7")
 
 lazy val akkaParadox = project
   .in(file("."))
   .settings(
-    publish / skip := true
+    skip in publish := true
   )
   .aggregate(akkaTheme, akkaPlugin)
 
